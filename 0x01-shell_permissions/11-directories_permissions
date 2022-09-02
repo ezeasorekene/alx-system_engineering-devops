@@ -1,2 +1,2 @@
 #!/bin/bash
-find * -type d -exec chmod ogw+x "{}" \;
+find . -type d -exec chmod ogw+x {} +
