@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Read input from stdin and count word frequencies
+declare -A count
+while read word; do
+  ((count[$word]++))
+done
+
+# Print out words that appear exactly once, sorted
+for word in "${!count[@]}"; do
+  if [[ ${count[$word]} -eq 1 ]]; then
+    echo "$word"
+  fi
+done | sort
+
